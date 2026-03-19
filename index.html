@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Nexora Weddings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-[linear-gradient(90deg,#e2a139_0%,#9e5231_50%,#5a1a1a_100%)] font-['Poppins'] min-h-screen flex flex-col">
+    <div class="p-2">
+      <nav class="z-50 rounded-xl w-full h-fit p-4 bg-[linear-gradient(1000deg,#cfa920_70%,#e5e37a_50%,#751d14_30%)]"
+        role="navigation" aria-label="Main navigation">
+        <div
+          class="inner-nav w-full backdrop-blur-md border-2 border-[rgb(86,23,23)] rounded-xl px-4 py-4 flex flex-wrap justify-between items-center">
+          <div class="logo flex flex-row gap-2.5 items-center">
+            <img src="./images/logo.jpeg" alt="NeXoRa Logo" class="h-10 w-10 rounded-md border-2 border-darkgoldenrod" />
+            <h1 class="text-2xl font-black text-[#D4AF37] tracking-tight">
+              NeXoRa
+            </h1>
+          </div>
+
+          <div class="hidden md:flex gap-4 items-center">
+            <a href="./home.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">HOME</a>
+            <a href="./event.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">EVENTS</a>
+            <a href="./about.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">ABOUT</a>
+            <a href="./contact.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">CONTACT</a>
+          </div>
+
+          <button id="hamburger-btn" onclick="toggleNav()"
+            class="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition" aria-label="Toggle navigation"
+            aria-expanded="false">
+            <i class="fa-solid fa-bars text-white text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      id="sideNav"
+      class="hidden fixed inset-y-0 left-0 z-[100] w-[70%] h-screen bg-[#6b1a1a]/95 backdrop-blur-md flex-col items-center justify-center gap-6 transition-all shadow-2xl"
+    >
+      <button onclick="toggleNav()" class="absolute top-8 right-8">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex flex-col gap-6 items-center w-full px-10">
+        <a
+          href="index.html"
+          class="w-full text-center text-lg font-bold text-white bg-white/10 py-3 rounded-xl border border-white/20 hover:bg-[#D4AF37] hover:text-[#800000] transition-all"
+          >HOME</a
+        >
+        <a
+          href="#"
+          class="w-full text-center text-lg font-bold text-white bg-white/10 py-3 rounded-xl border border-white/20 hover:bg-[#D4AF37] hover:text-[#800000] transition-all"
+          >ABOUT</a
+        >
+        <a
+          href="contact.html"
+          class="w-full text-center text-lg font-bold text-white bg-white/10 py-3 rounded-xl border border-white/20 hover:bg-[#D4AF37] hover:text-[#800000] transition-all"
+          >CONTACT</a
+        >
+      </div>
+    </div>
+
+    <main class="flex-grow flex items-center justify-center w-full px-4 py-8">
+      <div
+        class="w-full max-w-[95%] sm:max-w-md bg-[#FFFDF5] rounded-3xl shadow-2xl overflow-visible border border-[#D4AF37]/20 mb-10"
+      >
+      <div class="bg-[#800000] p-4 text-center rounded-t-3xl">
+        <h1
+          class="text-2xl md:text-3xl font-['Playfair_Display'] text-[#D4AF37]"
+        >
+          Nexora
+        </h1>
+        <p
+          class="text-[10px] md:text-xs text-white/80 uppercase tracking-[0.2em] mt-1"
+        >
+          Wedding Mediator Portal
+        </p>
+      </div>
+      <div class="p-6 md:p-10">
+        <h2
+          class="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center"
+        >
+          Welcome Back
+        </h2>
+
+        <form id="loginForm" class="space-y-5">
+          <div>
+            <label
+              class="block text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mb-1"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="w-full border-b border-gray-300 py-2 text-sm md:text-base focus:border-[#800000] outline-none transition-all"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              class="block text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mb-1"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              class="w-full border-b border-gray-300 py-2 text-sm md:text-base focus:border-[#800000] outline-none transition-all"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="flex items-center justify-between text-[11px] md:text-xs">
+            <label class="flex items-center text-gray-600">
+              <input type="checkbox" class="mr-2 accent-[#800000]" /> Remember
+              me
+            </label>
+            <a href="#" class="text-[#800000] hover:underline"
+              >Forgot Password?</a
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-[#D4AF37] hover:bg-[#b8962d] text-white font-bold py-3 rounded-xl shadow-lg transition-all uppercase tracking-widest text-xs md:text-sm mt-4"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <p class="text-center text-xs md:text-sm text-gray-500 mt-8">
+          Don't have an account?
+          <a href="#" class="text-[#800000] font-bold hover:underline"
+            >Register</a
+          >
+        </p>
+      </div>
+    </div>
+  </main>
+
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-3xl shadow-2xl w-full max-w-[90%] sm:max-w-sm p-8 border-2 border-[#D4AF37] text-center transform scale-95 opacity-0 transition-all duration-300 ease-out"
+        id="loginModalContent"
+      >
+        <div
+          class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-[#800000] mb-6 shadow-lg"
+        >
+          <svg
+            class="h-8 w-8 text-[#D4AF37]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        </div>
+
+        <h3 class="text-2xl font-['Playfair_Display'] text-[#800000] mb-2">
+          Login Successful
+        </h3>
+        <p
+          class="text-gray-600 text-sm mb-8 font-['Poppins']"
+          id="userGreeting"
+        ></p>
+
+        <button
+          id="closeLoginModal"
+          class="w-full bg-[#800000] hover:bg-[#600000] text-[#D4AF37] font-bold py-3 rounded-xl transition-all shadow-md uppercase tracking-widest text-xs"
+        >
+          Enter Portal
+        </button>
+      </div>
+    </div>
+
+    <footer class="bg-black/40 backdrop-blur-sm text-gray-300 pt-16 pb-8 text-sm md:mt-auto border-t border-white/10"
+      role="contentinfo">
+      <div
+        class="footer-grid max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-white/20 pb-10">
+
+        <div class="col-span-1">
+          <div class="text-2xl font-bold text-[#D4AF37] tracking-tight mb-1">NeXoRa</div>
+          <div class="text-[10px] text-gray-400 mb-6 tracking-wider uppercase">Premium Event Planning</div>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            NeXoRa is your premier platform to find the best event vendors with prices and reviews at the click of a
+            button.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
+              aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
+              aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-wbPink transition">About Us</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Careers</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Contact Us</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Terms &amp; Conditions</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Plan Your Event</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-wbPink transition">Vendors</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Real Events</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Event Blog</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Event Photos</a></li>
+            <li><a href="#" class="hover:text-wbPink transition">Submit an Event</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope mt-1 text-gray-400"></i>
+              <span>care@nexora.com</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone mt-1 text-gray-400"></i>
+              <span>080-69066666</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="max-w-7xl mx-auto px-4 mt-8 text-center text-gray-400">
+        <p>&copy; <span id="year"></span> NeXoRa. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

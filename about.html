@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nexora Weddings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="p-2">
+        <nav class="z-50 rounded-xl w-full h-fit p-4 bg-[linear-gradient(1000deg,#cfa920_70%,#e5e37a_50%,#751d14_30%)]"
+            role="navigation" aria-label="Main navigation">
+            <div
+                class="inner-nav w-full backdrop-blur-md border-2 border-[rgb(86,23,23)] rounded-xl px-4 py-4 flex flex-wrap justify-between items-center">
+                <div class="logo flex flex-row gap-2.5 items-center">
+                    <img src="./images/logo.jpeg" alt="NeXoRa Logo"
+                        class="h-10 w-10 rounded-md border-2 border-darkgoldenrod" />
+                    <h1 class="text-2xl font-black text-[#D4AF37] tracking-tight">
+                        NeXoRa
+                    </h1>
+                </div>
+
+                <div class="hidden md:flex gap-4 items-center">
+                    <a href="./home.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">HOME</a>
+                    <a href="./event.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">EVENTS</a>
+                    <a href="./about.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">ABOUT</a>
+                    <a href="./contact.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">CONTACT</a>
+                    <a href="./index.html"
+                        class="flex items-center gap-1.5 bg-[#751d14] text-white text-sm font-bold px-4 py-1.5 rounded-full hover:bg-[#c9174f] transition shadow-md"
+                        title="Logout">
+                        <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
+                    </a>
+                </div>
+
+                <button id="hamburger-btn" onclick="toggleNav()"
+                    class="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars text-white text-xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden px-4">
+                <div class="flex flex-col gap-3 pt-3 pb-4 border-t border-white/20 mt-2">
+                    <a href="./home.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity py-2">HOME</a>
+                    <a href="./event.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity py-2">EVENTS</a>
+                    <a href="./about.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity py-2">ABOUT</a>
+                    <a href="./contact.html"
+                        class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity py-2">CONTACT</a>
+                    <a href="./index.html"
+                        class="flex items-center gap-2 bg-[#751d14] text-white font-bold px-4 py-2 rounded-full hover:bg-[#c9174f] transition w-fit">
+                        <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+input:focus {
+    box-shadow: 0 4px 6px -1px rgba(128, 0, 0, 0.05);
+}
+
+#loginModal:not(.hidden) #loginModalContent {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}

@@ -1,8 +1,8 @@
 function toggleNav() {
-        const sideNav = document.getElementById('sideNav');
-        sideNav.classList.toggle('hidden');
-        sideNav.classList.toggle('flex');
-    }
+    const sideNav = document.getElementById('sideNav');
+    sideNav.classList.toggle('hidden');
+    sideNav.classList.toggle('flex');
+}
 // Select elements
 const contactForm = document.getElementById('contactForm');
 const successModal = document.getElementById('successModal');
@@ -11,9 +11,9 @@ const closeModal = document.getElementById('closeModal');
 const dynamicMessage = document.getElementById('dynamicMessage');
 
 // Form Submit Event
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     // Get values from input
     const name = document.getElementById('name').value;
     const service = document.getElementById('service').value;
@@ -23,18 +23,18 @@ contactForm.addEventListener('submit', function(e) {
 
     // 1. Show the background overlay
     successModal.classList.remove('hidden');
-    
+
     // 2. Clear the form fields
     this.reset();
 });
 
 // Close Modal Event (Click Button)
-closeModal.addEventListener('click', function() {
+closeModal.addEventListener('click', function () {
     closeSuccessModal();
 });
 
 // Close Modal Event (Clicking Outside the Content Card)
-successModal.addEventListener('click', function(e) {
+successModal.addEventListener('click', function (e) {
     if (e.target === successModal) {
         closeSuccessModal();
     }
@@ -47,5 +47,5 @@ function closeSuccessModal() {
     setTimeout(() => {
         successModal.classList.add('hidden');
         modalContent.classList.remove('opacity-0');
-    }, 250); 
+    }, 250);
 }

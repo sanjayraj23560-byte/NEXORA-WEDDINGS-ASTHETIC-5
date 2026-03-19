@@ -1,5 +1,7 @@
 /* Custom Styles for Nexora Weddings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -14,10 +16,12 @@ body {
     .p-6 {
         padding: 1.25rem;
     }
+
     h2 {
         font-size: 1.25rem;
     }
 }
+
 /* ... (Existing styles) ... */
 
 /* Modal Show State (via JS) */

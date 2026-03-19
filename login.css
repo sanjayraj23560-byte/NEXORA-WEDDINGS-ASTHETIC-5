@@ -1,5 +1,5 @@
-
-h1, h2 {
+h1,
+h2 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -7,6 +7,7 @@ h1, h2 {
 input:focus {
     box-shadow: 0 4px 6px -1px rgba(128, 0, 0, 0.05);
 }
+
 /* Modal Animation State */
 #loginModal:not(.hidden) #loginModalContent {
     transform: scale(1);

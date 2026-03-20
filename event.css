@@ -114,6 +114,10 @@
     .sidebar-card {
       cursor: pointer;
       transition: opacity var(--transition);
+      background-color: #9e5231;
+      padding: 10px;
+      border-radius: 20px;
+
     }
 
     .sidebar-card:hover {
@@ -323,10 +327,7 @@
         flex-direction: column !important;
       }
 
-      .sidebar-card .sidebar-thumb {
-        width: 100% !important;
-        height: 160px !important;
-      }
+
 
       footer .footer-grid {
         grid-template-columns: 1fr !important;

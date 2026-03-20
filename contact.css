@@ -1,31 +1,56 @@
-/* Custom Styles for Nexora Weddings */
-h1,
-h2,
-h3 {
-    font-family: 'Playfair Display', serif;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --pink: #751d14;
+    --gold: #D4AF37;
+    --dark: #1a0a0a;
+    --transition: 0.35s ease;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow var(--transition), background var(--transition);
+  }
+
+  nav.nav-scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #9e5231 0%, #5a1a1a 100%) !important;
+  }
+
+  #mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.4s;
+  border-radius: 20px;
 }
 
-/* Ensure images/backgrounds don't overflow on small screens */
-body {
-    overflow-x: hidden;
+#mobile-menu.menu-open {
+  max-height: 400px;
+  transition: all ease-in-out 0.4s;
+  backdrop-filter: blur(8px);
+  opacity: 1;
 }
 
+  /* ... (Existing styles) ... */
 
-/* Adjusting the form scale for very small mobile devices */
-@media (max-width: 375px) {
-    .p-6 {
-        padding: 1.25rem;
-    }
-
-    h2 {
-        font-size: 1.25rem;
-    }
-}
-
-/* ... (Existing styles) ... */
-
-/* Modal Show State (via JS) */
-#successModal:not(.hidden) #modalContent {
+  /* Modal Show State (via JS) */
+  #successModal:not(.hidden) #modalContent {
     transform: scale(1);
     opacity: 1;
-}
+  }

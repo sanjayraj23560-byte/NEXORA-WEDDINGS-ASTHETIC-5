@@ -1,20 +1,23 @@
-h1,
-h2 {
-    font-family: 'Playfair Display', serif;
-}
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
 
-/* Custom Input Focus Shadow */
-input:focus {
-    box-shadow: 0 4px 6px -1px rgba(128, 0, 0, 0.05);
-}
+ :root {
+   --pink: #751d14;
+   --gold: #D4AF37;
+   --dark: #1a0a0a;
+   --transition: 0.35s ease;
+ }
 
-/* Modal Animation State */
-#loginModal:not(.hidden) #loginModalContent {
-    transform: scale(1);
-    opacity: 1;
-}
+ /* Modal Animation State */
+ #loginModal:not(.hidden) #loginModalContent {
+   transform: scale(1);
+   opacity: 1;
+ }
 
-/* Add a smooth blur to the background when login happens */
-.backdrop-blur-sm {
-    backdrop-filter: blur(4px);
-}
+ /* Add a smooth blur to the background when login happens */
+ .backdrop-blur-sm {
+   backdrop-filter: blur(4px);
+ }

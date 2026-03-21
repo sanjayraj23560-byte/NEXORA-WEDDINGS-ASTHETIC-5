@@ -28,7 +28,6 @@
   opacity: 1;
 }
 
-  /* ... (Existing styles) ... */
 
   /* Modal Show State (via JS) */
   #successModal:not(.hidden) #modalContent {

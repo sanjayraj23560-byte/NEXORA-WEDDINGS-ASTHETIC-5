@@ -561,9 +561,6 @@ body {
         justify-content: center;
         flex-wrap: wrap;
     }
-    #about{
-      display: none;
-    }
 }
 
 /* ========== 800px (Tablets / Medium Screens) ========== */
@@ -592,9 +589,6 @@ body {
     }
     #nav-container{
       display: flex;
-    }
-    #about{
-      display: none;
     }
 }
 

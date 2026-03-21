@@ -1,0 +1,23 @@
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
+ :root {
+   --pink: #751d14;
+   --gold: #D4AF37;
+   --dark: #1a0a0a;
+   --transition: 0.35s ease;
+ }
+
+ /* Modal Animation State */
+ #loginModal:not(.hidden) #loginModalContent {
+   transform: scale(1);
+   opacity: 1;
+ }
+
+ /* Add a smooth blur to the background when login happens */
+ .backdrop-blur-sm {
+   backdrop-filter: blur(4px);
+ }

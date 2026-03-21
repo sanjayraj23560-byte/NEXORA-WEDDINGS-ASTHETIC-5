@@ -3,288 +3,394 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="home.css"/>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>NexorA</title>
 </head>
+<body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
 
-<body>
-  <div class="p-2">
-    <nav
-      class="z-50 rounded-xl w-full h-fit p-4 bg-[linear-gradient(1000deg,#751d14_70%,#e5e37a_50%,#cfa920_30%)] md:bg-[linear-gradient(1000deg,#cfa920_70%,#e5e37a_50%,#751d14_30%)]"
-      role="navigation" aria-label="Main navigation">
-      <div
-        class="inner-nav w-full backdrop-blur-md border-2 border-[rgb(86,23,23)] rounded-xl px-4 py-4 flex flex-wrap justify-between items-center">
-        <div class="logo flex flex-row gap-2.5 items-center">
-          <img src="logo.png" alt="NeXoRa Logo" class="h-10 w-10 rounded-md border-2 border-darkgoldenrod" />
-          <h1 class="text-2xl text-white font-black md:text-[#D4AF37] tracking-tight">
-            NeXoRa
-          </h1>
-        </div>
-
-        <div class="hidden md:flex gap-4 items-center" id="nav-container"> 
-          <a href="./home.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">HOME</a>
-          <a href="./event.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">EVENTS</a>
-          <a href="#about" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">ABOUT</a>
-          <a href="./contact.html"
-            class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">CONTACT</a>
-          <a href="./index.html"
-            class="flex items-center gap-1.5 bg-[#751d14] text-white text-sm font-bold px-4 py-1.5 rounded-full hover:bg-[#c9174f] transition shadow-md"
-            title="Logout">
-            <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
-          </a>
-        </div>
-
-        <button id="hamburger-btn"
-          class="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition" aria-label="Toggle navigation"
-          aria-expanded="false">
-          <i class="fa-solid fa-bars text-white text-xl"></i>
-        </button>
+  <div id="nav" class="fixed top-0 left-0 w-full z-50">
+  <nav class=" w-full bg-[linear-gradient(1000deg,#751d14_70%,#e5e37a_50%,#cfa920_30%)] md:bg-[linear-gradient(1000deg,#cfa920_70%,#e5e37a_50%,#751d14_30%)] shadow-lg transition-all duration-300">
+    
+    <div class="inner-nav w-full backdrop-blur-md border-2 border-[rgb(86,23,23)] rounded-xl px-4 py-4 flex justify-between items-center">
+      
+      <div class="logo flex items-center gap-2.5">
+        <img src="./images/logo.jpeg" alt="Logo" class="h-10 w-10 rounded-md border-2 border-darkgoldenrod" />
+        <h1 class="text-2xl text-white font-black md:text-[#D4AF37] tracking-tight">NeXoRa</h1>
       </div>
 
-      <div id="mobile-menu" class="md:hidden px-4">
-        <div class="flex flex-col gap-3 pt-3 pb-4 border-t border-white/20 mt-2">
-          <a href="./home.html" class="">HOME</a>
-          <a href="./event.html" class="">EVENTS</a>
-          <a href="#about" class="">ABOUT</a>
-          <a href="./contact.html" class="">CONTACT</a>
-          <a href="./index.html"
-            class="flex items-center gap-2 bg-[#751d14] text-white font-bold px-4 py-2 rounded-full hover:bg-[#c9174f] transition w-fit">
-            <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
-          </a>
-        </div>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="./home.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">HOME</a>
+        <a href="./event.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">EVENTS</a>
+        <a href="#about" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">ABOUT</a>
+        <a href="./contact.html" class="text-[rgb(96,20,20)] font-black hover:opacity-70 transition-opacity">CONTACT</a>
+        <a href="./index.html" class="flex items-center gap-1.5 bg-[#751d14] text-white text-sm font-bold px-4 py-1.5 rounded-full hover:bg-[#c9174f] shadow-md transition">
+          <i class="fa-solid fa-right-from-bracket"></i> LOGOUT
+        </a>
       </div>
-    </nav>
-  </div>
 
-  <!-- mian body of the page  -->
+      <button id="hamburger-btn" class="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition">
+        <i class="fa-solid fa-bars text-white text-xl"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+      <div class="flex flex-col gap-3 p-6 border-t border-white/20">
+        <a href="./home.html" class="text-white font-black py-2 border-b border-white/10">HOME</a>
+        <a href="./event.html" class="text-white font-black py-2 border-b border-white/10">EVENTS</a>
+        <a href="#about" class="text-white font-black py-2 border-b border-white/10">ABOUT</a>
+        <a href="./contact.html" class="text-white font-black py-2">CONTACT</a>
+        <a href="./index.html" class="bg-[#751d14] text-white font-bold px-4 py-3 rounded-xl text-center mt-2">
+          LOGOUT
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+  <!-- main header serction with img  -->
+  <!-- mian body of the page  -->
   <div class="header">
     <div class="head-item">
-      <img src="Screenshot 2026-03-18 193917.png" alt="" />
+      <img src="imgs/main.png" alt="" />
       <div class="img-elements">
-        <div class="h1s">
-          <h1 class="text-weight-400 font-size-xl" id="h1-header">World's No.1</h1>
-          <div class="hs" style="display: flex; flex-direction: row">
-            <h1 class="wed" id="h1-header">-wedding planning-</h1>
-            <h1 id="h1-header">platform</h1>
-          </div>
-        </div>
-        <p style="color: rgb(150, 41, 41); font-weight: 700; font-size: larger">
-          Hire best vendors such as photographers, makeup artists, Mandap,
-          Caterers and so on.
-        </p>
-        <div class="selections">
-          <select name="" id="">
-            <span>Select Vendors</span>
-            <option value="">makeup Artist</option>
-            <option value="">Travle-Tra</option>
-            <option value="">Ketti Melam</option>
-            <option value="">DJ's</option>
-            <option value="">Groom-glow</option>
-            <option value="">Singers</option>
-            <option value="">Photographers</option>
-            <option value="">Lightings</option>
-          </select>
-          <select name="" id="">
-            <span>Select Vendors</span>
-            <option value="">Banglore</option>
-            <option value="">Chennai</option>
-            <option value="">Goa</option>
-            <option value="">Telengana</option>
-            <option value="">Mumbai</option>
-            <option value="">Lucknow</option>
-            <option value="">Punjab</option>
-            <option value="">Waizage</option>
-          </select>
-          <button>Go TO Party</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Vendor sections with img and price  -->
-  <div class="all-vendors">
-    <h1>Vendor</h1>
-    <div class="vendors-cat">
-      <div class="img-card-vendor">
-        <img src="bridal-makeup-artists.avif" alt="" />
-        <h3>make Up</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="mehndi-artists.webp" alt="" />
-        <h3>Mehandi Artist</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-decorators.avif" alt="" />
-        <h3>Decoration</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-photographers.avif" alt="" />
-        <h3>Photographer</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-planners.avif" alt="" />
-        <h3>Planners</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-venues.avif" alt="" />
-        <h3>Grand-Venues</h3>
-      </div>
-      <!-- second controll scroll -->
-      <div class="img-card-vendor">
-        <img src="wedding-cars-rental.avif" alt="" />
-        <h3>Cars</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-entertainment.avif" alt="" />
-        <h3>Entertainments</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-gifts.avif" alt="" />
-        <h3>Gifts</h3>
-      </div>
-      <div class="img-card-vendor">
-        <img src="wedding-jewellery.webp" alt="" />
-        <h3>Jwellery</h3>
-      </div>
-    </div>
-  </div>
+        <h1 id="h1-header" style="font-size: 2rem; font-weight: 800; font-family: Verdana, Geneva, Tahoma, sans-serif;">WORLD'S NO.1-WEDDING PLANNING- PLATFORM</h1>
+        <p class="para-head">Hire best vendors such as photographers, makeup artists, Mandap,Caterers and so on.</p>
 
-  <!-- why section  -->
-  <h1 style="margin: 20px; color: #5c0e0e">Why WeddingNexora?</h1>
+        <div class="selections">
+          <select>
+            <option>Makeup Artist</option>
+            <option>Travel</option>
+            <option>DJ</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Goa</option>
+            <option>Makeup Artist</option>
+            <option>Travel</option>
+            <option>DJ</option>
+            <option>Makeup Artist</option>
+            <option>Travel</option>
+            <option>DJ</option>
+          </select>
+
+          <select>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Goa</option>
+            <option>pink city</option>
+            <option>lohore</option>
+            <option>horis</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Goa</option>
+          </select>
+
+          <button>Go To Party</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- vendora section with imgs  -->
+  <header>
+    <h1 class="title">Nexora Wedding Categories</h1>
+  </header>
+
+  <section class="card-container">
+
+    <div class="card">
+      <img src="imgs/bridal-makeup-artists.avif" alt="makeup-artists">
+      <h2>Makeup Artists</h2>
+      <p>Where elegance meets perfection.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-planners.avif" alt="planners">
+      <h2>Planners</h2>
+      <p>Where dreams meet perfect planning.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-photographers.avif" alt="photographers">
+      <h2>Photographers</h2>
+      <p>Capture memories with style.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-venues.avif" alt="venues">
+      <h2>Venues</h2>
+      <p>A space as special as your story.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-decorators.avif" alt="decorators">
+      <h2>Decorators</h2>
+      <p>Premium decoration</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-jewellery.webp" alt="invitations">
+      <h2>Invitations</h2>
+      <p>Elegance begins with an invitation.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/mehndi-artists.webp" alt="mehendi-artists">
+      <h2>Mehendi Artists</h2>
+      <p>Art fo tradition and beauty of mehendi.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="imgs/wedding-entertainment.avif" alt="djs">
+      <h2>DJS</h2>
+      <p>Feel the beat with live the moment.</p>
+      <a href="collection.html">
+        <button class="btn">View More</button>
+      </a>
+    </div>
+
+  </section>
+
+
+  <hr>
+  <!-- why section with popularity -->
+  <!-- why section  -->
+  <h1 style="margin: 20px; color: #5c0e0e; text-align: center; font-size: x-large;" class="why-h1">WHY NEXORA
+    WEDDINGS?</h1>
+
   <div class="all-why">
     <div class="why-nexora">
-      <br />
-
       <div class="img-card-why">
-        <img src="./images/happy-cos.svg" alt="" />
+        <img src="imgs/happy-cos.svg" alt="happy coustomer" />
         <h2>An atroticuloruster occatioon in 100000+ happy coustromer</h2>
       </div>
     </div>
+
     <div class="why-nexora">
       <div class="img-card-why">
-        <img src="./images/trust.svg" alt="" />
+        <img src="imgs/trust.svg" alt="The trust" />
         <h2>The trust we build will never disappoint you</h2>
       </div>
     </div>
+
     <!-- sjkffj -->
     <div class="why-nexora">
       <div class="img-card-why">
-        <img src="./images/map.svg" alt="" />
+        <img src="imgs/map.svg" alt="map" />
         <h2>10+ Trusted vendors across 50+ cities</h2>
       </div>
     </div>
+
     <div class="why-nexora">
       <div class="img-card-why">
-        <img src="./images/connections.svg" alt="" />
+        <img src="imgs/marri.png" alt="connections" />
         <h2>Happy connections by Nexora weddings</h2>
       </div>
     </div>
   </div>
-<!-- about section with scroll  -->
-     <div id="about">
-      <h1>Hello </h1>
-      <h2>bye</h2>
-    </div>
+  <!-- about section with scroll  -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-visuals">
+        <div class="main-frame">
+          <img src="imgs/marri.png" alt="Luxury Wedding" class="about-img-primary">
+          <div class="experience-badge">
+            <span class="years">12+</span>
+            <span class="label">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="accent-frame">
+          <img src="imgs/hall-venu.png" alt="Wedding Detail" class="about-img-secondary">
+        </div>
+      </div>
 
-  <footer class="bg-black/40 backdrop-blur-sm text-gray-300 pt-16 pb-8 text-sm mt-8 border-t border-white/10"
+      <div class="about-content">
+        <h4 class="sub-heading">Since 2014</h4>
+        <h2 class="main-heading">Crafting Unforgettable <span class="gold-glow">Legacies</span></h2>
+        <p class="description">
+          At <strong>NeXoRa Weddings</strong>, we believe a wedding is not just an event; it is a symphony of
+          emotions, heritage, and the beginning of a new chapter. As India's premier mediator portal, we specialize in
+          connecting discerning couples with elite vendors who transform visions into breathtaking realities.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Grand Weddings</p>
+          </div>
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Cities Covered</p>
+          </div>
+        </div>
+
+        <button class="about-cta">Our Full Story</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- our venodrs section  -->
+  <h1 style="margin: 20px; color: #5c0e0e; text-align: center; font-size: x-large;" class="why-h1">Our vendors have
+    generated 100 Crore business last month!</h1>
+  <div class="our-venodrs">
+    <div class="about-venodrs">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque enim facilis nisi eveniet excepturi,
+        distinctio veniam dolor quos, ea modi possimus, pariatur ipsam nulla deleniti. Minima fugit aliquid iure.
+        Magni omnis eius voluptatibus aliquid
+        Assumenda, praesentium.</p>
+      <br>
+      <div class="vendor-info">
+        <h3>-By Alloket</h3>
+        <h3>Hydrabad</h3>
+      </div>
+    </div>
+    <div class="about-venodrs">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque enim facilis nisi eveniet excepturi,
+        distinctio veniam dolor quos, ea modi possimus, pariatur ipsam nulla deleniti. Minima fugit aliquid iure.
+        Magni omnis eius voluptatibus aliquid
+        Assumenda, praesentium.</p>
+      <br>
+      <div class="vendor-info">
+        <h3>-By Alloket</h3>
+        <h3>Hydrabad</h3>
+      </div>
+    </div>
+    <div class="about-venodrs">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque enim facilis nisi eveniet excepturi,
+        distinctio veniam dolor quos, ea modi possimus, pariatur ipsam nulla deleniti. Minima fugit aliquid iure.
+        Magni omnis eius voluptatibus aliquid
+        Assumenda, praesentium.</p>
+      <br>
+      <div class="vendor-info">
+        <h3>-By Alloket</h3>
+        <h3>Hydrabad</h3>
+      </div>
+    </div>
+  </div>
+
+ <div class="crown">
+   <h1 class="brand-name">
+    Ne<span class="blink">X</span>o<span class="blink-2">R</span>a
+  </h1>
+  <img src="imgs/crown.png" alt="crown" class="img-crown">
+ </div>
+  <footer class="bg-black/40 backdrop-blur-sm text-gray-300 pt-16 pb-8 text-sm border-t border-white/10"
     role="contentinfo">
     <div
-      class="footer-grid max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-white/20 pb-10">
-      <div class="col-span-1">
-        <div class="text-2xl font-bold text-[#D4AF37] tracking-tight mb-1">
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+
+      <div class="flex flex-col items-start">
+        <div class="text-3xl font-black text-[#D4AF37] tracking-tighter mb-2">
           NeXoRa
         </div>
-        <div class="text-[10px] text-gray-400 mb-6 tracking-wider uppercase">
+        <div class="text-[10px] text-[#D4AF37]/60 mb-6 tracking-[0.2em] uppercase font-bold">
           Premium Event Planning
         </div>
-        <p class="text-gray-300 leading-relaxed mb-6">
-          NeXoRa is your premier platform to find the best event vendors with
-          prices and reviews at the click of a button.
+        <p class="text-gray-400 leading-relaxed text-sm mb-8 max-w-xs">
+          The world's premier platform for elite wedding mediation. Connecting discerning couples with the finest
+          vendors at the click of a button.
         </p>
-        <div class="flex space-x-4">
-          <a href="#"
-            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
-            aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"
-            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
-            aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"
-            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
-            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"
-            class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-wbPink transition"
-            aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <div class="flex space-x-5">
+          <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 text-lg"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 text-lg"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 text-lg"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-all duration-300 text-lg"><i
+              class="fa-brands fa-pinterest-p"></i></a>
         </div>
       </div>
 
-      <div>
-        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">
-          Quick Links
+      <div class="flex flex-col">
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs border-l-2 border-[#D4AF37] pl-3">
+          Company
         </h4>
-        <ul class="space-y-2">
-          <li>
-            <a href="#" class="hover:text-wbPink transition">About Us</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Careers</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Contact Us</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Privacy Policy</a>
-          </li>
+        <ul class="space-y-4 text-sm">
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">About NeXoRa</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Careers</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Contact Us</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Privacy Policy</a></li>
         </ul>
       </div>
 
-      <div>
-        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">
+      <div class="flex flex-col">
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs border-l-2 border-[#D4AF37] pl-3">
           Plan Your Event
         </h4>
-        <ul class="space-y-2">
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Vendors</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Real Events</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Event Blog</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Event Photos</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-wbPink transition">Submit an Event</a>
-          </li>
+        <ul class="space-y-4 text-sm">
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Elite Vendors</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Real Weddings</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Event Blog</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Gallery</a></li>
+          <li><a href="#" class="hover:text-[#D4AF37] transition-colors">Submit Story</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-white font-bold mb-4 uppercase tracking-wider">
-          Contact
+
+      <div class="flex flex-col">
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs border-l-2 border-[#D4AF37] pl-3">
+          Connect
         </h4>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <i class="fa-solid fa-envelope mt-1 text-gray-400"></i>
-            <span>care@nexora.com</span>
+        <ul class="space-y-5">
+          <li class="flex items-center gap-4 group">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#D4AF37]/10 transition-all">
+              <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
+            </div>
+            <span class="text-sm">care@nexora.com</span>
           </li>
-          <li class="flex items-start gap-3">
-            <i class="fa-solid fa-phone mt-1 text-gray-400"></i>
-            <span>080-69066666</span>
+          <li class="flex items-center gap-4 group">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#D4AF37]/10 transition-all">
+              <i class="fa-solid fa-phone text-[#D4AF37]"></i>
+            </div>
+            <span class="text-sm">+91 80 6906 6666</span>
           </li>
         </ul>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 mt-8 text-center text-gray-400">
-      <p>&copy; 2026 NeXoRa. All rights reserved.</p>
+
+    <div
+      class="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-[11px] uppercase tracking-widest">
+      <p>&copy; 2026 NeXoRa Weddings. All Rights Reserved.</p>
+      <div class="flex gap-6">
+        <span>Chennai</span>
+        <span>Bangalore</span>
+        <span>Mumbai</span>
+      </div>
     </div>
   </footer>
 </body>
 <script src="home.js" defer></script>
+
 </html>

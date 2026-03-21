@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .head-item {
@@ -747,6 +747,9 @@ body {
     .main-frame { width: 100%; }
     .accent-frame { display: none; }
     .stats-grid { justify-content: center; }
+    #about{
+      display: none;
+    }
 }
 
 

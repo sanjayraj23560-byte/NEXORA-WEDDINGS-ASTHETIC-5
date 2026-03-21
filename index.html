@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form| Nexora Weddings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body
+  class="m-0 p-0 min-h-screen flex flex-col bg-[linear-gradient(90deg,#e2a139_0%,#9e5231_50%,#5a1a1a_100%)] font-['Poppins'] ">
+
+  <div class="p-2">
+    <nav
+      class="z-50 rounded-xl w-full h-fit p-4 bg-[linear-gradient(1000deg,#751d14_70%,#e5e37a_50%,#cfa920_30%)] md:bg-[linear-gradient(1000deg,#cfa920_70%,#e5e37a_50%,#751d14_30%)]"
+      role="navigation" aria-label="Main navigation">
+      <div
+        class="inner-nav w-full backdrop-blur-md border-2 border-[rgb(86,23,23)] rounded-xl px-4 py-4 flex flex-wrap justify-between items-center">
+        <div class="logo flex flex-row gap-2.5 items-center">
+          <img src="./images/logo.jpeg" alt="NeXoRa Logo" class="h-10 w-10 rounded-md border-2 border-darkgoldenrod" />
+          <h1 class="text-2xl text-white font-black md:text-[#D4AF37] tracking-tight">
+            NeXoRa
+          </h1>
+        </div>
+
+        <main class="flex-grow flex items-center justify-center w-full px-4 py-8">
+          <div
+            class="w-full max-w-[95%] sm:max-w-md bg-[#FFFDF5] rounded-3xl shadow-2xl overflow-visible border border-[#D4AF37]/20 mb-10">
+            <div class="bg-[#800000] p-4 text-center rounded-t-3xl">
+              <h1 class="text-2xl md:text-3xl font-['Playfair_Display'] text-[#D4AF37]">
+                Nexora
+              </h1>
+              <p class="text-[10px] md:text-xs text-white/80 uppercase tracking-[0.2em] mt-1">
+                Wedding Mediator Portal
+              </p>
+            </div>
+            <div class="p-6 md:p-10">
+              <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6 text-center">
+                Welcome Back
+              </h2>
+
+              <form id="loginForm" class="space-y-5">
+                <div>
+                  <label class="block text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mb-1">Email
+                    Address</label>
+                  <input type="email" id="email"
+                    class="w-full border-b border-gray-300 py-2 text-sm md:text-base focus:border-[#800000] outline-none transition-all"
+                    placeholder="name@example.com" required />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-[10px] md:text-xs uppercase tracking-widest text-gray-500 mb-1">Password</label>
+                  <input type="password" id="password"
+                    class="w-full border-b border-gray-300 py-2 text-sm md:text-base focus:border-[#800000] outline-none transition-all"
+                    placeholder="••••••••" required />
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] md:text-xs">
+                  <label class="flex items-center text-gray-600">
+                    <input type="checkbox" class="mr-2 accent-[#800000]" /> Remember
+                    me
+                  </label>
+                  <a href="#" class="text-[#800000] hover:underline">Forgot Password?</a>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-[#D4AF37] hover:bg-[#b8962d] text-white font-bold py-3 rounded-xl shadow-lg transition-all uppercase tracking-widest text-xs md:text-sm mt-4">
+                  Sign In
+                </button>
+              </form>
+
+              <p class="text-center text-xs md:text-sm text-gray-500 mt-8">
+                Don't have an account?
+                <a href="#" class="text-[#800000] font-bold hover:underline">Register</a>
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <div id="loginModal"
+          class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden p-4 backdrop-blur-sm">
+          <div
+            class="bg-white rounded-3xl shadow-2xl w-full max-w-[90%] sm:max-w-sm p-8 border-2 border-[#D4AF37] text-center transform scale-95 opacity-0 transition-all duration-300 ease-out"
+            id="loginModalContent">
+            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-[#800000] mb-6 shadow-lg">
+              <svg class="h-8 w-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-['Playfair_Display'] text-[#800000] mb-2">
+              Login Successful
+            </h3>
+            <p class="text-gray-600 text-sm mb-8 font-['Poppins']" id="userGreeting"></p>
+
+            <button id="closeLoginModal"
+              class="w-full bg-[#800000] hover:bg-[#600000] text-[#D4AF37] font-bold py-3 rounded-xl transition-all shadow-md uppercase tracking-widest text-xs">
+              Enter Portal
+            </button>
+          </div>
+        </div>
+
+        <div id="forgotPasswordModal"
+          class="fixed inset-0 bg-black/60 z-[110] flex items-center justify-center hidden p-4 backdrop-blur-sm">
+          <div
+            class="bg-[#FFFDF5] rounded-3xl shadow-2xl w-full max-w-[90%] sm:max-w-md border-2 border-[#D4AF37] overflow-hidden transform transition-all">
+            <div class="bg-[#800000] p-4 text-center">
+              <h3 class="text-xl font-['Playfair_Display'] text-[#D4AF37]">Reset Password</h3>
+            </div>
+
+            <div class="p-8">
+              <p class="text-gray-600 text-sm mb-6 text-center">Enter your email address and we'll send you a link to
+                reset your password.</p>
+
+              <form id="forgotPasswordForm" class="space-y-4">
+                <div>
+                  <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
+                  <input type="email" required
+                    class="w-full border-b border-gray-300 py-2 focus:border-[#800000] outline-none transition-all"
+                    placeholder="your-email@example.com">
+                </div>
+
+                <div class="flex flex-col gap-3 mt-6">
+                  <button type="submit"
+                    class="w-full bg-[#800000] text-[#D4AF37] font-bold py-3 rounded-xl hover:bg-[#600000] transition-all uppercase tracking-widest text-xs">
+                    Send Reset Link
+                  </button>
+                  <button type="button" onclick="closeForgotModal()"
+                    class="w-full text-gray-500 font-bold py-2 text-xs uppercase tracking-widest hover:text-gray-800">
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <script src="index.js"></script>
+
+</body>

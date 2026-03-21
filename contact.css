@@ -1,0 +1,22 @@
+ /* #mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.4s;
+  border-radius: 20px;
+}
+
+#mobile-menu.menu-open {
+  max-height: 400px;
+  transition: all ease-in-out 0.4s;
+  backdrop-filter: blur(8px);
+  opacity: 1;
+} */
+
+  /* ... (Existing styles) ... */
+
+  /* Modal Show State (via JS) */
+  #successModal:not(.hidden) #modalContent {
+    transform: scale(1);
+    opacity: 1;
+  }

@@ -1,3 +1,8 @@
+   *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
   :root {
     --pink: #751d14;
@@ -6,27 +11,8 @@
     --transition: 0.35s ease;
   }
 
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
 
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: box-shadow var(--transition), background var(--transition);
-  }
-
-  nav.nav-scrolled {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(135deg, #9e5231 0%, #5a1a1a 100%) !important;
-  }
-
+ 
   #mobile-menu {
   max-height: 0;
   opacity: 0;
